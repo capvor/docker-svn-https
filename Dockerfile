@@ -1,5 +1,6 @@
 FROM debian:bullseye
 
+ENV TIME_ZONE Asia/Shanghai
 
 ARG DEBIAN_FRONTEND=noninteractive
 
