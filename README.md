@@ -7,8 +7,20 @@ docker run -d --name my_svn_https \
   --network test-tier \
   -p 52121:443 \
   -v /root/my/svn_data:/var/svn \
-  -e AUTH_NAME='"Example.Inc Subversion Repository"' \
-  customized/docker-svn-https
+  customized/svn-https
+```
+
+
+## 容器配置（可选）
+/etc/apache2/sites-available/svn-site.conf  
+例：修改AuthName
+```
+AuthName "Example.Inc Subversion Repository"
+```
+例：指定其他SSL证书
+```
+SSLCertificateFile      /etc/ssl/appcerts/server.cert
+SSLCertificateKeyFile   /etc/ssl/appcerts/server.key
 ```
 
 

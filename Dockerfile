@@ -1,10 +1,4 @@
-FROM debian:buster
-
-
-ENV AUTH_NAME '"Auth Name"'
-
-ENV HTTPS_CERT "/etc/ssl/certs/ssl-cert-snakeoil.pem"
-ENV HTTPS_KEY  "/etc/ssl/private/ssl-cert-snakeoil.key"
+FROM debian:bullseye
 
 
 ARG DEBIAN_FRONTEND=noninteractive
