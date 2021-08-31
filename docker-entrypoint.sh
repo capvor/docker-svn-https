@@ -13,4 +13,10 @@ if [[ $TIME_ZONE != "" ]]; then
     fi
 fi
 
+if [ ! -f "/var/svn/svn-site.conf" ]; then
+    a2ensite svn-site.conf
+else
+    ln -snf /var/svn/svn-site.conf /etc/apache2/sites-enabled/svn-site.conf
+fi
+
 exec apache2ctl -D FOREGROUND
